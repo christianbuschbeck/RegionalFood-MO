@@ -1,0 +1,25 @@
+"V1" "V2"
+"1" "pasture_c" 34
+"2" "alfalfa_c" 103
+"3" "barley_c" 151
+"4" "maizegrain_c" 94
+"5" "maizesilage_c" 74
+"6" "rapeseed_c" 271
+"7" "wheat_c" 136
+"8" "soybean_c" 246
+"9" "pea_c" 275
+"10" "sunflower_c" 333
+"11" "sugarbeet_c" 13
+"12" "pasture_o" 34
+"13" "alfalfa_o" 103
+"14" "barley_o" 250
+"15" "pea_o" 286
+"16" "maizegrain_o" 192
+"17" "maizesilage_o" 95
+"18" "pea_o" 333
+"19" "rapeseed_o" 500
+"20" "wheat_o" 250
+"21" "soybean_o" 385
+"22" "barley_o" 333
+"23" "sunflower_o" 333
+"24" "tricitalegrain_o" 250
