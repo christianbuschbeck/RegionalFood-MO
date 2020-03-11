@@ -1,8 +1,8 @@
-source("C:/Schaffeschaffe/RegionalFood/smartsolutionbranch/packages.r")
-source("C:/Schaffeschaffe/RegionalFood/smartsolutionbranch/model-functions.r")
-source("C:/Schaffeschaffe/RegionalFood/smartsolutionbranch/optimization-functions.r")
+source("./packages.r")
+source("./model-functions.r")
+source("./optimization-functions.r")
 
-load("C:/Schaffeschaffe/RegionalFood/smartsolutionbranch/Rdata/processed_data.Rdata")
+load("./Rdata/processed_data.Rdata")
 
 
 pop <- 10458365
@@ -11,35 +11,35 @@ pa <- pa_bw
 
 dm <- demands[,c(1,2)]
 emoa_base <- EMOA(MU=1500, LAMBDA= 200, MAX.ITER = 10,start=400)
-save(emoa_base,file = paste(folder,"/Rdata/emoa_base.Rdata",sep=""))
+save(emoa_base,file = "./Rdata/emoa_base.Rdata")
 
 emoa_base <- EMOA(MU=1500, LAMBDA= 200, MAX.ITER = 3000,POPULATION = emoa_base$population)
-save(emoa_base,file = paste(folder,"/Rdata/emoa_base2.Rdata",sep=""))
+save(emoa_base,file = "./Rdata/emoa_base2.Rdata")
 
 
 #----------------
 
 dm <- demands[,c(1,3)]
 emoa_vegi <- EMOA(MU=1500, LAMBDA= 200, MAX.ITER = 10,start=400)
-save(emoa_vegi,file = paste(folder,"/Rdata/emoa_vegi.Rdata",sep=""))
+save(emoa_vegi,file = "./Rdata/emoa_vegi.Rdata")
 
 emoa_vegi <- EMOA(MU=1500, LAMBDA= 200, MAX.ITER = 3000,POPULATION = emoa_vegi$population)
-save(emoa_vegi,file = paste(folder,"/Rdata/emoa_vegi2.Rdata",sep=""))
+save(emoa_vegi,file = "./Rdata/emoa_vegi2.Rdata")
 
 
 #--------------------
 dm <- demands[,c(1,4)]
 emoa_vegan <- EMOA(MU=1500, LAMBDA= 200, MAX.ITER = 10,start=400)
-save(emoa_vegan,file = paste(folder,"/Rdata/emoa_vegan.Rdata",sep=""))
+save(emoa_vegan,file = "./Rdata/emoa_vegan.Rdata")
 
 emoa_vegan <- EMOA(MU=1500, LAMBDA= 200, MAX.ITER = 3000,POPULATION = emoa_vegan$population)
-save(emoa_vegan,file = paste(folder,"/Rdata/emoa_vegan2.Rdata",sep=""))
+save(emoa_vegan,file = "./Rdata/emoa_vegan2.Rdata")
 
-load(paste(folder,"/Rdata/emoa_base2.Rdata",sep=""))
+load("./Rdata/emoa_base2.Rdata")
 base <- emoa_base
-load(paste(folder,"/Rdata/emoa_vegi2.Rdata",sep=""))
+load("./Rdata/emoa_vegi2.Rdata")
 vegi <- emoa_vegi
-load(paste(folder,"/Rdata/emoa_vegan2.Rdata",sep=""))
+load("./Rdata/emoa_vegan2.Rdata")
 vegan <- emoa_vegan
 
 

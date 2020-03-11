@@ -33,7 +33,7 @@ rgbz <- st_read(paste(folder,"/GIS_data/VG1000_RBZ.shp",sep=""))
 ##############################
 
 #Borders of BW and Freiburg are retrieved from the shapefile containing district borders and transformed 
-bawue <- subset(rgbz,GEN =="Freiburg"|GEN =="Karlsruhe"|GEN =="Stuttgart"|GEN =="Tübingen")
+bawue <- subset(rgbz,GEN =="Freiburg"|GEN =="Karlsruhe"|GEN =="Stuttgart"|GEN =="T?bingen")
 freiburg <- subset(rgbz,GEN =="Freiburg")
 bawue <- st_transform(bawue,4326) 
 freiburg <- st_transform(freiburg,4326)
@@ -75,5 +75,5 @@ staedte <- as.data.frame(name)
 staedte["lon"] <- c(9.1829321,8.403653,8.4660395,7.842104,8.6724335,9.9876076,9.210879,8.6946286,9.2038043,7.949802,8.460140,8.834670,9.612130,7.658900,9.192220)
 staedte["lat"] <- c(48.7758459,49.006889,49.4874592,47.999008,49.3987524,48.4010822,49.1426929,48.8921862,48.5069389,48.473450,48.055408,47.761791,47.778271,47.611700,48.896140)
 
-save.image("C:/Schaffeschaffe/RegionalFood/smartsolutionbranch/Rdata/processed_data.Rdata")
+save.image(paste(folder,"/Rdata/processed_data.Rdata"))
 
