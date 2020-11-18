@@ -514,8 +514,8 @@ fit_LSS <- function(q){
   )
   
   #Demand fulfillmentrate for poultry if totaldemand of eggs would be met
-  if(dm[14,2]>0 & over[14] > 1) over[14] <- (((over[14]/100*(dm[14,2]*pop/ 1000000)) - (over[11]/100 * (dm[11,2]*pop/ 1000000)*0.066))/((dm[14,2]*pop/ 1000000) - ((dm[11,2]*pop/ 1000000)*0.066)))*100
-  
+  over[14] <- ((over[14]/100*(dm[14,2]*pop/ 1000000)) + (1/over[11] *  over[11]/100 * (dm[11,2]*pop/ 1000000)*0.066)) / (dm[14,2]*pop/ 1000000) * 100
+  if(over[14]>100)over[14] <- 100
   # Calculating the multiplicator that estimates missing food
   mult <-(100-over)/over
   
